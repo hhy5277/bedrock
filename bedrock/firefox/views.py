@@ -724,9 +724,11 @@ def new(request):
             elif experience == 'auf-deiner-seite':
                 template = 'firefox/new/berlin/scene1-auf-deiner-seite.html'
             else:
-                template = 'firefox/new/scene1.html'
+                template = 'firefox/new/features/index.de.html'
         elif switch('firefox-yandex') and locale == 'ru':
             template = 'firefox/new/yandex/scene1.html'
+        elif locale == 'en-GB':
+            template = 'firefox/new/features/index.en-GB.html'
         elif locale == 'en-US':
             if experience == 'betterbrowser':
                 template = 'firefox/new/better-browser/scene1.html'

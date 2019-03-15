@@ -1,0 +1,120 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% add_lang_files "firefox/new/quantum" %}
+
+{% extends "firefox/new/scene1.html" %}
+
+{# All stylesheets are loaded in extrahead to serve legacy IE basic styles #}
+{% block extrahead %}
+  {{ super() }}
+  {{ css_bundle('firefox_new_features_experiment') }}
+{% endblock %}
+
+{% block features_content %}
+<div class="features-longform">
+  <div class="content">
+    <h2>Features, made for you</h2>
+
+    <section class="c-card-feature l-card-feature-right-half">
+      <div class="c-card-feature-media-wrapper">
+        <div class="c-card-feature-media">
+          {{ high_res_img('firefox/new/features/en/private.png', {'alt': '', 'width': '480', 'height': '343'}) }}
+        </div>
+      </div>
+      <div class="c-card-feature-content">
+        <div class="c-card-feature-content-container">
+          <h3 class="c-card-feature-title">Private Browser</h3>
+          <p class="c-card-feature-desc">Don’t let them see your data: passwords, cookies and browser history get deleted automatically when closing the browser. Ad-Trackers are being blocked and you can browse even faster.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="c-card-feature l-card-feature-left-half">
+      <div class="c-card-feature-media-wrapper">
+        <div class="c-card-feature-media">
+          {{ high_res_img('firefox/new/features/en/control-center.png', {'alt': '', 'width': '480', 'height': '401'}) }}
+        </div>
+      </div>
+      <div class="c-card-feature-content">
+        <div class="c-card-feature-content-container">
+          <h3 class="c-card-feature-title">Ad-tracker Blocking</h3>
+          <p class="c-card-feature-desc">No chance for Cookies and Co. Block third party trackers and website elements, that want to track your activities on the web. You can decide if you want to block those always, only in private mode or user-defined.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="c-card-feature l-card-feature-right-half">
+      <div class="c-card-feature-media-wrapper">
+        <div class="c-card-feature-media">
+          {{ high_res_img('firefox/new/features/en/sync.png', {'alt': '', 'width': '480', 'height': '360'}) }}
+        </div>
+      </div>
+      <div class="c-card-feature-content">
+        <div class="c-card-feature-content-container">
+          <h3 class="c-card-feature-title">Device Sync</h3>
+          <p class="c-card-feature-desc">Everything under control, on every device. With your Firefox account you can sync bookmarks, send open tab to another device with one click, safely access your passwords, safe notes and much more.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="c-card-feature l-card-feature-left-half">
+      <div class="c-card-feature-media-wrapper">
+        <div class="c-card-feature-media">
+          {{ high_res_img('firefox/new/features/en/password-manager.png', {'alt': '', 'width': '480', 'height': '343'}) }}
+        </div>
+      </div>
+      <div class="c-card-feature-content">
+        <div class="c-card-feature-content-container">
+          <h3 class="c-card-feature-title">Password Manager</h3>
+          <p class="c-card-feature-desc">Forget about remembering all the passwords. Log in with your Firefox account – your passwords and logins are already waiting for you there – on all your devices. Easy and safe.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="c-card-feature l-card-feature-right-half">
+      <div class="c-card-feature-media-wrapper">
+        <div class="c-card-feature-media">
+          {{ high_res_img('firefox/new/features/en/faster.png', {'alt': '', 'width': '480', 'height': '319'}) }}
+        </div>
+      </div>
+      <div class="c-card-feature-content">
+        <div class="c-card-feature-content-container">
+          <h3 class="c-card-feature-title">Faster Browser</h3>
+          <p class="c-card-feature-desc">The new Firefox browser is 2x faster than before and used 30% less RAM than chrome. Tab and Websites are loading fast as ever, thanks to our multi process architecture. So you can work, play games, or stream just the way you want it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="c-card-feature l-card-feature-left-half">
+      <div class="c-card-feature-media-wrapper">
+        <div class="c-card-feature-media">
+          {{ high_res_img('firefox/new/features/en/switch.png', {'alt': '', 'width': '480', 'height': '257'}) }}
+        </div>
+      </div>
+      <div class="c-card-feature-content">
+        <div class="c-card-feature-content-container">
+          <h3 class="c-card-feature-title">Easy Switching</h3>
+          <p class="c-card-feature-desc">Switch to Firefox fast and easy. In just a few minutes Firefox imports your bookmarks, auto fills, passwords and settings from chrome or other browsers. Quick and painless.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<section class="c-call-out-compact t-product-firefox t-dark">
+  <div class="content">
+    <div class="c-call-out-content">
+      <div class="c-call-out-container">
+        <h2 class="c-call-out-title">Meet Firefox Quantum. Fast for good.</h2>
+      </div>
+    </div>
+    <div class="c-call-out-cta">
+      <div class="c-call-out-cta-container">
+        {{ download_firefox(dom_id='download-call-out-secondary', download_location='secondary cta') }}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
