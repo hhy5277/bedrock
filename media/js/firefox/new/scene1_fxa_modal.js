@@ -8,7 +8,7 @@
     'use strict';
 
     var client = window.Mozilla.Client;
-    var $downloadButton = $('#download-button-desktop-release .download-link[data-download-os="Desktop"]');
+    var $downloadButton = $('.download-button .download-link[data-download-os="Desktop"]');
     var $downloadAnyway = $('#download-fxa-modal .download-link[data-download-os="Desktop"]');
 
     var initFxAccountModal = function() {

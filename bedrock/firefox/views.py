@@ -716,6 +716,8 @@ def new(request):
                 template = 'firefox/new/berlin/scene1-privat.html'
             elif experience == 'auf-deiner-seite':
                 template = 'firefox/new/berlin/scene1-auf-deiner-seite.html'
+            elif variant in ['a', 'b', 'c']:
+                template = 'firefox/new/features/index.de-{}.html'.format(variant)
             else:
                 template = 'firefox/new/scene1.html'
         elif switch('firefox-yandex') and locale == 'ru':
@@ -726,6 +728,11 @@ def new(request):
                     template = 'firefox/new/privacy-dmt/scene1-{}.html'.format(variant)
                 else:
                     template = 'firefox/new/scene1.html'
+            else:
+                template = 'firefox/new/scene1.html'
+        elif locale == 'en-GB':
+            if variant in ['a', 'b', 'c']:
+                template = 'firefox/new/features/index.en-gb-{}.html'.format(variant)
             else:
                 template = 'firefox/new/scene1.html'
         elif locale == 'en-US':

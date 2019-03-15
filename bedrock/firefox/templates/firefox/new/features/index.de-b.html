@@ -1,0 +1,37 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% add_lang_files "firefox/new/quantum" %}
+
+{% extends "firefox/new/scene1.html" %}
+
+{% block features_content %}
+<div class="features">
+  <div class="content">
+    <ul>
+      <li class="faster">
+        <h3>{{_('2x Faster') }}</h3>
+        <p>{{_('The best Firefox ever') }}</p>
+      </li>
+      <li class="lighter">
+        <h3>{{_('Lightweight') }}</h3>
+        <p>{{_('Uses 30% less memory than Chrome') }}</p>
+      </li>
+      <li class="private">
+        <h3>{{_('Powerfully private') }}</h3>
+        <p>{{_('Truly Private Browsing with Tracking Protection') }}</p>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
+
+{% block stub_attribution %}
+  {% if settings.STUB_ATTRIBUTION_RATE %}
+    <!--[if !lte IE 8]><!-->
+    {{ js_bundle('stub-attribution-custom') }}
+    {{ js_bundle('experiment_firefox_new_features_variation') }}
+    <!--<![endif]-->
+  {% endif %}
+{% endblock %}
